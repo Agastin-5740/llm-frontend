@@ -25,7 +25,7 @@ export default function App() {
     setMessages(prev => [...prev, { type: "user", text: question }]);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/nl-query", {
+      const res = await fetch("https://llm-backend-g22t.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
